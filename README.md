@@ -10,7 +10,6 @@ Balls spring toward the center, collide and repel from the mouse with motion phy
 - Clean, scalable structure
 
 ## Demo
-[Live Demo](#) 
 
 https://bartjsdev.github.io/physicsEngine/
 
