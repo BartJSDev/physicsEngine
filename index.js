@@ -8,6 +8,7 @@ let balls = []
 let particles = []
 let mouse = { x: null, y: null }
 let max_particles = 1000
+let collide_snd = new Audio("sounds/collide.mp3")
 
 draw()
 
@@ -74,6 +75,9 @@ function Checkcollisions(ballA, ballB) {
 
     if (distance < minDist) {
 
+        if (!ballA.collided) collide_snd.play()
+        if (!ballB.collided) collide_snd.play()
+        
         ballA.collided = true
         ballB.collided = true
 
