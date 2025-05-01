@@ -1,4 +1,4 @@
-# Physics Engine
+# SnapSpringJS
 
 A dynamic, interactive particle and collision-based simulation built on HTML5 Canvas.  
 Balls spring toward the center, collide and repel from the mouse with motion physics, and emit colorful particles in response to user interaction.
