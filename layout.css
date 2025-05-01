@@ -19,91 +19,87 @@ body {
     margin: 0;
     overflow: hidden;
     background-color: rgb(84, 77, 77);
+
 }
 
-.title {
+nav{
 
+    background-color: rgb(47, 47, 54);
+    position: absolute;
     width: 100%;
-    text-shadow: 3px 3px #000000;
-    color: white;
+    z-index: 5;
+}
+
+nav .title{
+
+    text-align: center;
     font-size: xx-large;
-    position: absolute;
-    text-align: center;
-    top: 50px;
-
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 5px 5px black;
 }
 
-.info {
+nav .info{
 
-    width: 100%;
-    color: white;
+    text-align: center;
     font-size: large;
-    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav .menu {
+
     text-align: center;
-    top: 100px;
-    text-shadow: 3px 3px #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-#hint {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: Roboto;
-    font-size: x-large;
-    color: white;
-    opacity: 0.7;
-    pointer-events: none;
-    animation: fadeOut 5s ease-out forwards;
+nav a{
+
+    font-size: smaller;
+    text-decoration: none;
+    color: yellow;
 }
 
-/* Optional fade-out after 5s */
-@keyframes fadeOut {
-    0% {
-        opacity: 0.7;
-    }
+nav .menu{
 
-    100% {
-        opacity: 0;
-    }
+    display: none;
 }
 
+
+/* mobile */
 @media (max-width: 600px) {
-    .title {
-        width: 100%;
-        color: white;
-        font-size: large;
-        position: absolute;
-        text-align: center;
-        top: 50px;
-        text-shadow: 3px 3px #000000;
-    
-    }
 
-    .info {
+    nav .title{
 
-        width: 100%;
-        color: white;
-        font-size: small;
-        position: absolute;
         text-align: center;
-        top: 80px;
-        text-shadow: 3px 3px #000000;
-    }
-
-    #hint {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-family: Roboto;
-        font-size: large;
-        color: white;
-        opacity: 0.7;
-        pointer-events: none;
-        animation: fadeOut 5s ease-out forwards;
+        font-size: xx-large;
+        text-shadow: 5px 5px black;
     }
     
+    nav .info{
+    
+        text-align: center;
+        font-size: large;
+       
+    }
+    
+    nav .menu {
+    
+        text-align: center;
+    
+    }
+    
+    nav a{
+    
+        font-size: smaller;
+        text-decoration: none;
+        color: yellow;
+    }
+    
+    nav .menu{
+    
+        display: none;
+    }
+
 }

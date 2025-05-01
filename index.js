@@ -19,12 +19,14 @@ function draw() {
     // Handle collisions before drawing
     for (let i = 0; i < balls.length; i++) {
         for (let j = i + 1; j < balls.length; j++) {
+
             Checkcollisions(balls[i], balls[j])
         }
     }
 
     //ball motion
     balls.forEach(ball => {
+
 
         ball.springTo(canvas.width / 2, canvas.height / 2)
         ball.draw()
@@ -36,14 +38,15 @@ function draw() {
                 particles.push(new Particle(ball.x, ball.y, ball.color))
             }
 
-        }else{
+        } else {
 
-           ball.originPoint.x = ball.x 
-           ball.originPoint.y = ball.y
-           ball.repel(mouse.x , mouse.y , 1000)
+            ball.originPoint.x = ball.x
+            ball.originPoint.y = ball.y
+            ball.repel(mouse.x, mouse.y, 1000)
+
         }
 
-    
+
 
     })
 
@@ -77,7 +80,7 @@ function Checkcollisions(ballA, ballB) {
 
         if (!ballA.collided) collide_snd.play()
         if (!ballB.collided) collide_snd.play()
-        
+
         ballA.collided = true
         ballB.collided = true
 
@@ -119,7 +122,7 @@ canvas.addEventListener("touchstart", function (e) {
     let touch = e.touches[0]
     let x = touch.clientX * devicePixelRatio
     let y = touch.clientY * devicePixelRatio
-    var ball = new Ball(x , y, randomRange(50, 100), randomColor())
+    var ball = new Ball(x, y, randomRange(50, 100), randomColor())
     ball.velocity.x = 150
     ball.velocity.y = 150
     balls.push(ball)
