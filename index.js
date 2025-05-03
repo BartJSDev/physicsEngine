@@ -9,6 +9,18 @@ let particles = []
 let mouse = { x: null, y: null }
 let max_particles = 1000
 let collide_snd = new Audio("sounds/collide.mp3")
+let center = {x:0,y:0}
+
+if (window.innerWidth > 768) {
+
+    center.x = canvas.width/2
+    center.y = canvas.height/2
+
+}else{
+
+    center.x = canvas.width/2
+    center.y = canvas.height * .6
+}
 
 draw()
 
@@ -28,7 +40,7 @@ function draw() {
     balls.forEach(ball => {
 
 
-        ball.springTo(canvas.width / 2, canvas.height / 2)
+        ball.springTo(center.x , center.y)
         ball.draw()
 
         if (!ball.collided) {
