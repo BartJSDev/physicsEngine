@@ -121,7 +121,7 @@ canvas.addEventListener("mousemove", function (e) {
     mouse.y = e.clientY * devicePixelRatio
 })
 
-addEventListener("click", function (e) {
+canvas.addEventListener("click", function (e) {
 
     var ball = new Ball(mouse.x, mouse.y, randomRange(100, 200), randomColor())
     ball.velocity.x = 150
@@ -131,6 +131,7 @@ addEventListener("click", function (e) {
 
 canvas.addEventListener("touchstart", function (e) {
 
+    e.preventDefault()
     let touch = e.touches[0]
     let x = touch.clientX * devicePixelRatio
     let y = touch.clientY * devicePixelRatio
