@@ -54,16 +54,21 @@ nav .menu {
     padding-bottom: 10px;
 }
 
-nav a{
+nav button{
 
-    font-size: smaller;
+    font-size: large;
     text-decoration: none;
-    color: yellow;
+    color: rgb(0, 0, 0);
+    border: none;
+    background-color: rgb(229, 240, 26);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 nav .menu{
 
-    display: none;
+    display: block;
 }
 
 
@@ -90,16 +95,21 @@ nav .menu{
     
     }
     
-    nav a{
+    nav button{
     
-        font-size: smaller;
+        font-size: large;
         text-decoration: none;
-        color: yellow;
+        color: rgb(0, 0, 0);
+        border: none;
+        background-color: rgb(229, 240, 26);
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
     }
     
     nav .menu{
     
-        display: none;
+        display: block;
     }
 
 }

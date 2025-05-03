@@ -103,13 +103,13 @@ function Checkcollisions(ballA, ballB) {
     }
 }
 
-addEventListener("mousemove", function (e) {
+canvas.addEventListener("mousemove", function (e) {
 
     mouse.x = e.clientX * devicePixelRatio
     mouse.y = e.clientY * devicePixelRatio
 })
 
-addEventListener("click", function (e) {
+canvas.addEventListener("click", function (e) {
 
     var ball = new Ball(mouse.x, mouse.y, randomRange(100, 200), randomColor())
     ball.velocity.x = 150
@@ -127,3 +127,9 @@ canvas.addEventListener("touchstart", function (e) {
     ball.velocity.y = 150
     balls.push(ball)
 })
+
+function clear_canvas(){
+
+    balls = []
+    particles = []
+}
